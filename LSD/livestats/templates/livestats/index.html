@@ -1,0 +1,9 @@
+{% if last_joined %}
+    <ul>
+    {% for player in last_joined %}
+        <li><a href="/livestats/{{ player.id }}/">{{ player.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No players are available.</p>
+{% endif %}
